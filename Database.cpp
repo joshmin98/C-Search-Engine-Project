@@ -59,15 +59,12 @@ Database::Database(const std::string &indexFilePath) {
 // Performs an intersection of two sets. To be used to implement andFunc()
 std::set<std::string> Database::setIntersection(std::set<std::string> *first,
                                                 std::set<std::string> *second) {
-  std::set<std::string>::iterator firstIter = first->begin();
-  std::set<std::string>::iterator secondIter = second->begin();
+  std::set<std::string>::iterator it = first->begin();
   std::set<std::string> output;
 
-  for (; firstIter != first->end(); ++firstIter) {
-    for (; secondIter != second->end(); ++secondIter) {
-      if (*firstIter == *secondIter) {
-        output.insert(*firstIter);
-      }
+  for (; it != first->end(); ++it) {
+    if (second->find(*it) != second->end()) {
+      output.insert(*it);
     }
   }
   return output;
