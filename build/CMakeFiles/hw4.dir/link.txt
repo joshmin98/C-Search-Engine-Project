@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -g -std=c++11   CMakeFiles/hw4.dir/Database.cpp.o CMakeFiles/hw4.dir/Search.cpp.o CMakeFiles/hw4.dir/WebPage.cpp.o  -o hw4 

@@ -1,0 +1,3 @@
+#include "WebPage.h"
+
+WebPage::WebPage() {}

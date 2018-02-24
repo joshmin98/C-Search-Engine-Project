@@ -1,0 +1,11 @@
+#include "Database.h"
+#include "WebPage.h"
+int main(int argc, char *argv[])
+{
+  if (argc < 2) {
+    std::cerr << "Invalid argument" << std::endl;
+    return -1;
+  }
+  Webpage w = WebPage("./data/page1.txt");
+  return 0;
+}
